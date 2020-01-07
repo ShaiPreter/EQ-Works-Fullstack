@@ -1,1 +1,2 @@
 This repository contains the build version, so the frontend react code can't be read here, though the back end node code can. Go to this repository to view the react code (https://github.com/ShaiPreter/EQ-Works-Frontend).
+rate-limiter.js implements the server side rate limiter. The client side data table and client side visual chart visualizations are implemented as well and can be viewed on the frontend repository.
