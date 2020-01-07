@@ -15,7 +15,7 @@ const rateLimiter = function(req, res, next) {
             if (err) {
                 return res.status(500).send(err.message)
             }
-            const reqCount = replies[1];
+            const reqCount = replies[2];
             console.log(replies);
             console.log(req.ip);
             if (reqCount > 20) {
