@@ -82,7 +82,10 @@ app.get('/poi', (req, res, next) => {
 app.get('/all', (req, res, next) => {
   req.sqlQuery = `
     SELECT *
-    FROM public;
+    FROM public.hourly_events
+    GROUP BY date
+    ORDER BY date
+    LIMIT 7;
   `;
   return next()
 }, queryHandler);
