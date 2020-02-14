@@ -79,6 +79,14 @@ app.get('/poi', (req, res, next) => {
   return next()
 }, queryHandler);
 
+app.get('/all', (req, res, next) => {
+  req.sqlQuery = `
+    SELECT *
+    FROM public;
+  `;
+  return next()
+}, queryHandler);
+
 app.listen(process.env.PORT || 5555, (err) => {
   if (err) {
     console.error(err);
